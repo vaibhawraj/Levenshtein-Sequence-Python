@@ -26,7 +26,7 @@ def backtrackSequence(matrix,  StringA, StringB, i=None, j=None):
         j = len(StringB)
     if(i==0 and j==0):
         return [[[],StringA,0]]
-    if(StringA[i-1] == StringB[j-1]):
+    if(i>=0 and j>=0 and StringA[i-1] == StringB[j-1]):
         paths = backtrackSequence(matrix,StringA,StringB,i-1,j-1)
         return paths
     else:
